@@ -71,7 +71,8 @@ nav li:hover {
 
 .welcome-section {
     background-color: #e7e8ec;
-    background-image: linear-gradient( 115deg, rgba(253, 253, 255, 0.8), rgba(190, 190, 191, 0.7)), url(https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?cs=srgb&dl=pexels-j%C3%A9shoots-238118.jpg&fm=jpg);
+    background-image: linear-gradient( 115deg, rgba(253, 253, 255, 0.8), rgba(190, 190, 191, 0.7)), url(https://img.freepik.com/free-photo/cozy-desktop-with-coffee-laptop_23-2147833250.jpg?w=1380&t=st=1660920465~exp=1660921065~hmac=01a6d1306ee73b4afbf79749ddb768db879b7e5dde3a70b1a5816d0c6a503c6c);
+    /* background-image: linear-gradient( 115deg, rgba(253, 253, 255, 0.8), rgba(190, 190, 191, 0.7)), url(https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?cs=srgb&dl=pexels-j%C3%A9shoots-238118.jpg&fm=jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

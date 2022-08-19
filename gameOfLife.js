@@ -46,7 +46,7 @@ function setup() {
     speedBar.parent('#speed-bar');
 
 
-    randomBar = createSlider(0, 2, 0);
+    randomBar = createSlider(0, 2, 0, 2);
     randomBar.position(0, 0);
     randomBar.style('width', "350px"); //'200px'
     randomBar.parent('#random-bar');
@@ -389,6 +389,9 @@ function init() {
     let pattern = generatePattern(pa)
     let pattern2 = generatePattern(pa)
     let pattern3 = generatePattern(engineCorderShip)
+    let pattern4 = generatePattern(bomber)
+    let pattern5 = generatePattern(pa2)
+    let pattern6 = generatePattern(pa3)
 
 
 
@@ -425,9 +428,27 @@ function init() {
     drawPattern(pattern, 20, 50)
     drawPattern(pattern2, 20, 10)
 
-    if (windowWidth > 700) {
-        drawPattern(pattern3, 100, 10)
+    if (windowWidth > 500) {
+        drawPattern(pattern6, 100, 10)
+
+
+        drawPattern(pattern4, 100, 50)
+
+
     }
+
+    if (windowWidth > 800) {
+        drawPattern(pattern5, 200, 10)
+        drawPattern(pattern3, 200, 10)
+
+
+
+    }
+
+    // if (windowWidth > 900) {
+    //     // drawPattern(pattern5, 300, 10)
+    //     drawPattern(pattern6, 300, 50)
+    // }
 
     frameCount = 0
 
