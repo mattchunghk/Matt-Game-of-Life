@@ -424,26 +424,21 @@ function init() {
     //         next[i][j] = 0;
     //     }
     // }
-
-    drawPattern(pattern, 20, 50)
-    drawPattern(pattern2, 20, 10)
-
-    if (windowWidth > 500) {
-        drawPattern(pattern6, 100, 10)
+    drawPattern(pattern2, 5, 5)
+    drawPattern(pattern6, 5, 70)
+        // drawPattern(pattern3, 5, 50)
+        // drawPattern(pattern, 5, 50)
 
 
-        drawPattern(pattern4, 100, 50)
+    // if (windowWidth > 600) {
+    //     // drawPattern(pattern6, 100, 10)
+    //     drawPattern(pattern4, 70, 50)
+    // }
 
-
-    }
-
-    if (windowWidth > 800) {
-        drawPattern(pattern5, 200, 10)
-        drawPattern(pattern3, 200, 10)
-
-
-
-    }
+    // if (windowWidth > 800) {
+    //     drawPattern(pattern5, 200, 10)
+    //     
+    // }
 
     // if (windowWidth > 900) {
     //     // drawPattern(pattern5, 300, 10)
