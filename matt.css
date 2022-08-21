@@ -109,6 +109,39 @@ nav li:hover {
 
 /* about start*/
 
+.about-me-title {
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    width: 400px
+}
+
+.about-me-text {
+    height: auto;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    text-justify: distribute;
+    padding: 10px;
+    width: 440px;
+    /* word-wrap: break-word;
+    white-space: pre-wrap; */
+    margin: 0 40px;
+}
+
+@media (max-width: 450px) {
+    .about-me-text {
+        height: auto;
+        font-size: 1rem;
+        line-height: 2rem;
+        text-justify: distribute;
+        padding: 10px;
+        width: 300px;
+        /* word-wrap: break-word;
+        white-space: pre-wrap; */
+        margin: 0 40px;
+    }
+}
+
 
 /* about end*/
 
@@ -221,8 +254,23 @@ footer {
     text-align: center;
 }
 
-.contact-details:hover {
+.contact-links {
     font-size: 1.5rem;
+    padding: 10px 0 10px;
+}
+
+.contact-details:hover {
+    font-size: 2rem;
+}
+
+@media (max-width: 520px) {
+    .contact-links {
+        font-size: 1rem;
+        padding: 10px 0 10px;
+    }
+    .contact-details:hover {
+        font-size: 1.5rem;
+    }
 }
 
 
