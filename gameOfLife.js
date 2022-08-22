@@ -150,7 +150,7 @@ function draw() {
     for (let i = 0; i < columns; i++) {
         for (let j = 0; j < rows; j++) {
 
-            if (j < rows / 3) {
+            if (j < rows / 2) {
                 if (currentBoard[i][j].state == 1) {
                     fill(colorBarVal, 33, colorBarVal, 1)
 
@@ -164,7 +164,7 @@ function draw() {
                 } else {
                     fill(90);
                 }
-            } else if (j > rows / 3) {
+            } else if (j > rows / 2) {
                 if (currentBoard[i][j].state == 1) {
                     fill(colorBarVal - 100 + frameCount % 60, 33, colorBarVal - 100, 1)
                 } else if (currentBoard[i][j].state == 2) {
