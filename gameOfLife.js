@@ -128,17 +128,15 @@ function draw() {
     generate();
     frameRate(speedBarVal)
 
-    if (keyboardX > windowWidth - 90) {
-        console.log(windowWidth - 90)
-        console.log(keyboardX)
-        keyboardX = 0
-    } else if (keyboardY > windowHeight - 400) {
-        keyboardY = 0
-    } else if (keyboardX < 1) {
-        keyboardX = windowWidth - 90
-    } else if (keyboardY < 1) {
-        keyboardY = windowHeight - 400
-    }
+    // if (keyboardX > windowWidth - 90) {
+    //     keyboardX = 0
+    // } else if (keyboardY > windowHeight - 400) {
+    //     keyboardY = 0
+    // } else if (keyboardX < 1) {
+    //     keyboardX = windowWidth - 90
+    // } else if (keyboardY < 1) {
+    //     keyboardY = windowHeight - 400
+    // }
 
 
 
@@ -211,12 +209,18 @@ function init() {
 
 function windowResized() {
     noLoop()
-    resizeCanvas(windowWidth, windowHeight);
-    setup();
+    resizeCanvas(windowWidth - 90, windowHeight - 400);
+    setup()
     loop();
 }
 
-
+/**
+ * Draw Pattern
+ *
+ * @param {ArrayList} pattern The pattern to draw (2D array).
+ * @param {number} x Position x that is going to draw on.
+ * @param {number} y Position y that is going to draw on.
+ */
 function drawPattern(pattern, x, y) {
     for (let i = 0; i < pattern.length; i++) {
         for (let j = 0; j < pattern[i].length; j++) {
@@ -312,10 +316,11 @@ function keyPressed() {
 
     const x = Math.floor(keyboardX / unitLength);
     const y = Math.floor(keyboardY / unitLength);
-    currentBoard[x][y].values = 1
-    nextBoard[x][y].values = 1
-    currentBoard[x][y].state = 5
-    nextBoard[x][y].state = 5
+    console.log((x + columns) % columns, (y + rows) % rows)
+    currentBoard[(x + columns) % columns][(y + rows) % rows].values = 1
+    nextBoard[(x + columns) % columns][(y + rows) % rows].values = 1
+    currentBoard[(x + columns) % columns][(y + rows) % rows].state = 5
+    nextBoard[(x + columns) % columns][(y + rows) % rows].state = 5
 
     // fill(keyboardX, 50, keyboardY, 1)
     stroke(strokeColor);
@@ -379,7 +384,7 @@ function generate() {
                 // New life due to Reproduction
                 nextBoard[x][y].values = 1;
             } else {
-                // Stasis
+                // Stasissw
                 nextBoard[x][y].values = currentBoard[x][y].values;
             }
 
